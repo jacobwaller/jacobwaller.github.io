@@ -153,7 +153,7 @@ let CONFIG = {
   /**
    * The delimiter between the hours and minutes on the clock.
    */
-  clockDelimiter: ' ',
+  clockDelimiter: ':',
 
   /**
    * Show a twenty-four-hour clock instead of a twelve-hour clock with AM/PM.
@@ -257,13 +257,15 @@ class Clock {
     }
 
     const minutes = $.pad(date.getMinutes());
-    this._el.innerHTML = `${hours}${this._delimiter}${minutes}${amPm}`;
+    const seconds = $.pad(date.getSeconds());
+    const tenths  = $.pad(date.getMilliseconds()/100);
+    this._el.innerHTML = `${hours}${this._delimiter}${minutes}${this._delimiter}${seconds}.${tenths}${amPm}`;
     this._el.setAttribute('datetime', date.toTimeString());
   }
 
   _start() {
     this._setTime();
-    setInterval(this._setTime, 1000);
+    setInterval(this._setTime, 100);
   }
 }
 
