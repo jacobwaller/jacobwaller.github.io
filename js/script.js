@@ -8,9 +8,9 @@ let CONFIG = {
    */
   commands: [
     {
-      name: 'Duckduckgo',
+      name: 'Google',
       key: '*',
-      url: 'https://duckduckgo.com',
+      url: 'https://google.com',
       search: '/?q={}'
     },
     {
@@ -18,7 +18,7 @@ let CONFIG = {
       name: 'Mail',
       key: 'm',
       url: 'https://gmail.com',
-      search: '/#search/text={}',
+      search: '/#search/{}',
       color: 'linear-gradient(135deg, #dd5145, #dd5145)',
       icon: 'mail',
       quickLaunch: true,
@@ -51,16 +51,6 @@ let CONFIG = {
       search: '/search?q={}',
       color: 'linear-gradient(135deg, #53341C, #F48024)',
       icon: 'stackoverflow',
-      quickLaunch: true,
-    },
-    {
-      category: 'Tech',
-      name: 'HackerNews',
-      key: 'h',
-      url: 'https://news.ycombinator.com/',
-      search: '/search?stories[query]={}',
-      color: 'linear-gradient(135deg, #FF6600, #DC5901)',
-      icon: 'hackernews',
       quickLaunch: true,
     },
     {
@@ -168,7 +158,7 @@ let CONFIG = {
   /**
    * Show a twenty-four-hour clock instead of a twelve-hour clock with AM/PM.
    */
-  twentyFourHourClock: true,
+  twentyFourHourClock: false,
 };
 
 // Get invertedColors preference from cookies
