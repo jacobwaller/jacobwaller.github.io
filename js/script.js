@@ -34,16 +34,6 @@ let CONFIG = {
       quickLaunch: false,
     },
     {
-      category: 'General',
-      name: 'LinkedIn',
-      key: 'l',
-      url: 'https://linkedin.com',
-      search: '/search/results/all/?keywords={}',
-      color: 'linear-gradient(135deg, #006CA4, #0077B5)',
-      icon: 'linkedin',
-      quickLaunch: true,
-    },
-    {
       category: 'Tech',
       name: 'GitHub',
       key: 'g',
@@ -93,16 +83,6 @@ let CONFIG = {
       quickLaunch: false,
     },
     {
-      category: 'Fun',
-      name: 'Twitch',
-      key: 'tw',
-      url: 'https://www.twitch.tv',
-      search: '/directory/game/{}',
-      color: 'linear-gradient(135deg, #6441a5, #4b367c)',
-      icon: 'twitch',
-      quickLaunch: false,
-    },
-    {
       category: 'Other',
       name: 'Reddit',
       key: 'r',
@@ -111,27 +91,7 @@ let CONFIG = {
       color: 'linear-gradient(135deg, #FF8456, #FF4500)',
       icon: 'reddit',
       quickLaunch: false,
-    },
-    {
-      category: 'Other',
-      name: 'Twitter',
-      key: 't',
-      url: 'https://twitter.com',
-      search: '/search?q={}&src=typed_query',
-      color: 'linear-gradient(135deg, #1DA1F2, #19608F)',
-      icon: 'twitter',
-      quickLaunch: true,
-    },
-    {
-      category: 'Other',
-      name: 'IMDb',
-      key: 'i',
-      url: 'https://imdb.com',
-      search: '/find?ref_=nv_sr_fn&q={}',
-      color: 'linear-gradient(135deg, #7A5F00, #E8B708)',
-      icon: 'imdb',
-      quickLaunch: false,
-    },
+    }
   ],
 
   /**
@@ -186,7 +146,7 @@ let CONFIG = {
   /**
    * Show keys instead of icons
    */
-  showKeys: false,
+  showKeys: true,
 
   /**
    * The delimiter between a command key and your search query. For example,
