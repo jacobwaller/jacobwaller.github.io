@@ -11,7 +11,7 @@ let CONFIG = {
       name: 'Google',
       key: '*',
       url: 'https://google.com',
-      search: '/search/?q={}'
+      search: '/search?q={}'
     },
     {
       category: 'General',
