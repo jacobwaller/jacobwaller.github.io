@@ -259,7 +259,7 @@ class Clock {
     const minutes = $.pad(date.getMinutes());
     const seconds = $.pad(date.getSeconds());
     const tenths  = $.pad(date.getMilliseconds()/100);
-    this._el.innerHTML = `${hours}${this._delimiter}${minutes}${this._delimiter}${seconds}.${tenths}${amPm}`;
+    this._el.innerHTML = `${hours}${this._delimiter}${minutes}${this._delimiter}${seconds}.${(Date.now()%1000)/100}${amPm}`;
     this._el.setAttribute('datetime', date.toTimeString());
   }
 
