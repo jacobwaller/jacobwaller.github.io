@@ -11,7 +11,7 @@ let CONFIG = {
       name: 'Google',
       key: '*',
       url: 'https://google.com',
-      search: '/?q={}'
+      search: '/search/?q={}'
     },
     {
       category: 'General',
@@ -259,7 +259,7 @@ class Clock {
     const minutes = $.pad(date.getMinutes());
     const seconds = $.pad(date.getSeconds());
     const tenths  = $.pad(date.getMilliseconds()/100);
-    this._el.innerHTML = `${hours}${this._delimiter}${minutes}${this._delimiter}${seconds}.${Math.floor((Date.now()%1000))}${amPm}`;
+    this._el.innerHTML = `${hours}${this._delimiter}${minutes}${this._delimiter}${seconds}${amPm}`;
     this._el.setAttribute('datetime', date.toTimeString());
   }
 
